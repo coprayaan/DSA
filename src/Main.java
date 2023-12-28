@@ -1,17 +1,51 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import algorithms.SortingAlgorithm;
+import utilities.PrintingService;
+import utilities.RandomGenrator;
+import utilities.StopWatchService;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
-    public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    public static void main(String... args){
+        SortingAlgorithm sortingAlgorithm = new SortingAlgorithm();
+        PrintingService<Integer> printingService = new PrintingService<>();
+        RandomGenrator randomGenrator = new RandomGenrator();
+        List<Integer> numbers = randomGenrator.GenerateIntList(50000,10000);
+        List<Integer> unsortedNumbers = new ArrayList<>(numbers);
+        StopWatchService bubbleSortTimeEstimate = new StopWatchService();
+        StopWatchService selectionSortTimeEstimate = new StopWatchService();
+        StopWatchService insertionSortTimeEstimate = new StopWatchService();
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        System.out.println("\n____________Bubble Sorting _____________\n");
+        printingService.printArray("Before Sorting :", numbers);
+        bubbleSortTimeEstimate.startTimer();
+        sortingAlgorithm.bubbleSort(numbers);
+        bubbleSortTimeEstimate.endTimer();
+        printingService.printArray("After Sorting :", numbers);
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
-        }
+        System.out.println("\n____________Selection Sorting _____________\n");
+        numbers = new ArrayList<>(unsortedNumbers);
+        printingService.printArray("Before Sorting :", numbers);
+        selectionSortTimeEstimate.startTimer();
+        sortingAlgorithm.selectionSort(numbers);
+        selectionSortTimeEstimate.endTimer();
+        printingService.printArray("After Sorting :", numbers);
+
+        System.out.println("\n____________Insertion Sorting _____________\n");
+        numbers = new ArrayList<>(unsortedNumbers);
+        printingService.printArray("Before Sorting :", numbers);
+        insertionSortTimeEstimate.startTimer();
+        sortingAlgorithm.insertionSort(numbers);
+        insertionSortTimeEstimate.endTimer();
+        printingService.printArray("After Sorting :", numbers);
+
+        bubbleSortTimeEstimate.printTimeTaken("Bubble Sort");
+
+        selectionSortTimeEstimate.printTimeTaken("Selection Sort");
+
+        insertionSortTimeEstimate.printTimeTaken("Insertion Sort");
+
     }
+
 }
