@@ -17,6 +17,7 @@ public class Main {
         StopWatchService selectionSortTimeEstimate = new StopWatchService();
         StopWatchService insertionSortTimeEstimate = new StopWatchService();
         StopWatchService mergeSortTimeEstimate = new StopWatchService();
+        StopWatchService quickSortTimeEstimate = new StopWatchService();
 
         System.out.println("\n____________Bubble Sorting _____________\n");
         printingService.printArray("Before Sorting :", numbers);
@@ -49,6 +50,16 @@ public class Main {
         mergeSortTimeEstimate.endTimer();
         printingService.printArray("After Sorting :", numbers);
 
+        System.out.println("\n____________Quick Sorting _____________\n");
+        numbers = new ArrayList<>(unsortedNumbers);
+        printingService.printArray("Before Sorting :", numbers);
+        quickSortTimeEstimate.startTimer();
+        sortingAlgorithm.quickSort(numbers);
+        quickSortTimeEstimate.endTimer();
+        printingService.printArray("After Sorting :", numbers);
+
+
+
         bubbleSortTimeEstimate.printTimeTaken("Bubble Sort");
 
         selectionSortTimeEstimate.printTimeTaken("Selection Sort");
@@ -57,6 +68,7 @@ public class Main {
 
         mergeSortTimeEstimate.printTimeTaken("Merge Sort");
 
+        quickSortTimeEstimate.printTimeTaken("Quick Sort");
     }
 
 }

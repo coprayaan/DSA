@@ -40,6 +40,39 @@ public class SortingAlgorithm {
         }
     }
 
+    public void quickSort(List<Integer> nums){
+        quickSort(nums, 0, nums.size() - 1);
+    }
+
+    public void quickSort(List<Integer> nums, int start, int end) {
+       if(start >= end ){
+           return;
+       }
+       int pivot = partition(nums, start, end);
+       quickSort(nums, start, pivot-1);
+       quickSort(nums, pivot+1,   end );
+    }
+
+    private int partition(List<Integer> nums, int left, int right) {
+        int pivot = right;
+        int leftPointer = left, rightPointer = right;
+        while (leftPointer < rightPointer){
+            while (leftPointer < right && nums.get(leftPointer) < nums.get(pivot)){
+                leftPointer++;
+            }
+            while (rightPointer > left && nums.get(rightPointer) >= nums.get(pivot)){
+                rightPointer--;
+            }
+            if(leftPointer < rightPointer){
+                swap(nums, leftPointer, rightPointer);
+            }
+        }
+        swap(nums, leftPointer, pivot);
+        return leftPointer;
+    }
+
+
+
     public List<Integer> mergeSort(List<Integer> nums){
         Integer[] numsArray = nums.toArray(new Integer[0]);
         mergeSortSplit(numsArray, 0, numsArray.length - 1);
