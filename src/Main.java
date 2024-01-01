@@ -21,6 +21,13 @@ public class Main {
 
         SortingHelper selectionSort = new SortingHelper(numbers, "Selection Sort", new SelectionSortStrategy());
         selectionSort.run();
+
+        SortingHelper heapSort = new SortingHelper(numbers, "Heap Sort", new SelectionSortStrategy());
+        heapSort.run();
+
+        SortingHelper countSorting = new SortingHelper(numbers, "Count Sort", new CountingSortStrategy());
+        countSorting.run();
+
     }
 
 }
