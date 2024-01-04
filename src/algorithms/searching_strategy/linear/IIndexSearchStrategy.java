@@ -1,5 +1,5 @@
 package algorithms.searching_strategy.linear;
 
-public interface IIndexSearchAlgorithm extends ISearchAlgorithm {
+public interface IIndexSearchStrategy extends ISearchStrategy {
     public int findIndexOf(Integer element);
 }

@@ -2,10 +2,9 @@ package algorithms.sorting_strategy;
 
 import utilities.ListUtilities;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class CountingSortStrategy implements ISortingAlgorithm{
+public class CountingSortStrategy implements ISortingStrategy {
 
     private final ListUtilities<Integer> utilites;
 

@@ -4,7 +4,7 @@ import utilities.ListUtilities;
 
 import java.util.List;
 
-public class HeapSortingStrategy implements ISortingAlgorithm{
+public class HeapSortingStrategy implements ISortingStrategy {
     public ListUtilities<Integer> utilities;
     public HeapSortingStrategy(){
         utilities = new ListUtilities<>();

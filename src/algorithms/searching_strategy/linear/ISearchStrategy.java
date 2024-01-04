@@ -1,10 +1,6 @@
 package algorithms.searching_strategy.linear;
 
-import java.util.List;
-
-public interface ISearchAlgorithm {
+public interface ISearchStrategy {
 
     public boolean checkIsExist(Integer element_to_search);
-
-
 }

@@ -2,7 +2,7 @@ package algorithms.sorting_strategy;
 import utilities.ListUtilities;
 import java.util.List;
 
-public class SelectionSortStrategy implements ISortingAlgorithm{
+public class SelectionSortStrategy implements ISortingStrategy {
     public ListUtilities<Integer> utilities;
     public SelectionSortStrategy(){
         utilities = new ListUtilities<>();

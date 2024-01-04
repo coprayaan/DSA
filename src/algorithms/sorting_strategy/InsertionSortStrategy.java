@@ -4,7 +4,7 @@ import utilities.ListUtilities;
 
 import java.util.List;
 
-public class InsertionSortStrategy implements ISortingAlgorithm {
+public class InsertionSortStrategy implements ISortingStrategy {
     public ListUtilities<Integer> utilities;
     public InsertionSortStrategy(){
         utilities = new ListUtilities<>();

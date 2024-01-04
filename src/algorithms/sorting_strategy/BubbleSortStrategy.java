@@ -4,7 +4,7 @@ import utilities.ListUtilities;
 
 import java.util.List;
 
-public class BubbleSortStrategy implements ISortingAlgorithm{
+public class BubbleSortStrategy implements ISortingStrategy {
     public ListUtilities<Integer> utilities;
     public BubbleSortStrategy(){
         utilities = new ListUtilities<>();

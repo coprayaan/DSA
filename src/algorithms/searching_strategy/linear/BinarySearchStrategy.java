@@ -1,14 +1,14 @@
 package algorithms.searching_strategy.linear;
-import algorithms.sorting_strategy.ISortingAlgorithm;
+import algorithms.sorting_strategy.ISortingStrategy;
 import algorithms.sorting_strategy.QuickSortStrategy;
 import utilities.ListUtilities;
 
 import java.util.List;
 
-public class BinarySearchStrategy implements ISearchAlgorithm {
+public class BinarySearchStrategy implements ISearchStrategy {
 
     private final List<Integer> elements;
-    private final ISortingAlgorithm sortingStrategy;
+    private final ISortingStrategy sortingStrategy;
     private boolean isElementsSorted;
 
     public ListUtilities<Integer> utilities;

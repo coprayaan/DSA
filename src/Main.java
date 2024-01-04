@@ -1,8 +1,9 @@
-import algorithms.SortingHelper;
+import algorithms.AlgorithmBenchmarker;
 import algorithms.searching_strategy.linear.BinarySearchStrategy;
-import algorithms.searching_strategy.linear.ISearchAlgorithm;
-import algorithms.sorting_strategy.ISortingAlgorithm;
-import algorithms.sorting_strategy.RadixSortStrategy;
+import algorithms.searching_strategy.linear.IIndexSearchStrategy;
+import algorithms.searching_strategy.linear.ISearchStrategy;
+import algorithms.searching_strategy.linear.LinearSearchStrategy;
+import algorithms.sorting_strategy.*;
 import utilities.RandomGenrator;
 import java.util.List;
 
@@ -10,40 +11,40 @@ public class Main {
     public static void main(String... args) {
         RandomGenrator randomGenrator = new RandomGenrator();
         List<Integer> numbers = randomGenrator.generateIntList(100,20);
-//        SortingHelper quickSort = new SortingHelper(numbers, "Quick Sort", new QuickSortStrategy());
+//        AlgorithmBenchmarker quickSort = new AlgorithmBenchmarker(numbers, "Quick Sort", new QuickSortStrategy());
 //        quickSort.run();
-
-//        SortingHelper mergeSort = new SortingHelper(numbers, "Merge Sort", new MergeSortStrategy());
+//
+//        AlgorithmBenchmarker mergeSort = new AlgorithmBenchmarker(numbers, "Merge Sort", new MergeSortStrategy());
 //        mergeSort.run();
-
-//        SortingHelper bubbleSort = new SortingHelper(numbers, "Bubble Sort", new BubbleSortStrategy());
+//
+//        AlgorithmBenchmarker bubbleSort = new AlgorithmBenchmarker(numbers, "Bubble Sort", new BubbleSortStrategy());
 //        bubbleSort.run();
-
-//        SortingHelper insertionSort = new SortingHelper(numbers, "Insertion Sort", new InsertionSortStrategy());
+//
+//        AlgorithmBenchmarker insertionSort = new AlgorithmBenchmarker(numbers, "Insertion Sort", new InsertionSortStrategy());
 //        insertionSort.run();
-
-//        SortingHelper selectionSort = new SortingHelper(numbers, "Selection Sort", new SelectionSortStrategy());
+//
+//        AlgorithmBenchmarker selectionSort = new AlgorithmBenchmarker(numbers, "Selection Sort", new SelectionSortStrategy());
 //        selectionSort.run();
-
-//        SortingHelper heapSort = new SortingHelper(numbers, "Heap Sort", new SelectionSortStrategy());
+//
+//        AlgorithmBenchmarker heapSort = new AlgorithmBenchmarker(numbers, "Heap Sort", new SelectionSortStrategy());
 //        heapSort.run();
-
-//        SortingHelper countSorting = new SortingHelper(numbers, "Count Sort", new CountingSortStrategy());
+//
+//        AlgorithmBenchmarker countSorting = new AlgorithmBenchmarker(numbers, "Count Sort", new CountingSortStrategy());
 //        countSorting.run();
-
-//        SortingHelper redixSorting = new SortingHelper(numbers, "Radix Sort", new RadixSortStrategy());
+//
+//        AlgorithmBenchmarker redixSorting = new AlgorithmBenchmarker(numbers, "Radix Sort", new RadixSortStrategy());
 //        redixSorting.run();
-
-//        IIndexSearchAlgorithm searchAlgorithm = new LinearSearchStrategy(numbers);
+//
+//        IIndexSearchStrategy searchAlgorithm = new LinearSearchStrategy(numbers);
 //        System.out.println(searchAlgorithm.findIndexOf(25));
 
-//        ISortingAlgorithm sortingAlgo = new RadixSortStrategy();
+//        ISortingStrategy sortingAlgo = new RadixSortStrategy();
 //        sortingAlgo.sort(numbers);
-//        ISearchAlgorithm binarySearchAlgorith = new BinarySearchStrategy(numbers,true);
-//        System.out.println(binarySearchAlgorith.checkIsExist(numbers.get(0)));
+//        ISearchStrategy sortedBinarySearch = new BinarySearchStrategy(numbers,true);
+//        System.out.println(sortedBinarySearch.checkIsExist(numbers.get(0)));
 
-        ISearchAlgorithm binarySearchAlgorith = new BinarySearchStrategy(numbers);
-        System.out.println(binarySearchAlgorith.checkIsExist(numbers.get(0)));
+        ISearchStrategy binarySearchAlgorithm = new BinarySearchStrategy(numbers);
+        System.out.println(binarySearchAlgorithm.checkIsExist(numbers.get(0)));
     }
 
 }

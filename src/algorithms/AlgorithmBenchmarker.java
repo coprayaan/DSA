@@ -1,20 +1,20 @@
 package algorithms;
 
-import algorithms.sorting_strategy.ISortingAlgorithm;
+import algorithms.sorting_strategy.ISortingStrategy;
 import utilities.PrintingService;
 import utilities.StopWatchService;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SortingHelper {
-    private ISortingAlgorithm strategy;
+public class AlgorithmBenchmarker {
+    private ISortingStrategy strategy;
     private final PrintingService<Integer> printingService;
     private String label;
     private List<Integer> numbers ;
     private final StopWatchService timeEstimate;
 
-    public SortingHelper(List<Integer> numbers, String label ,ISortingAlgorithm strategy ){
+    public AlgorithmBenchmarker(List<Integer> numbers, String label , ISortingStrategy strategy ){
         this.strategy = strategy;
         this.printingService = new PrintingService<>();
         this.numbers = new ArrayList<>(numbers);

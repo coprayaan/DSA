@@ -5,7 +5,7 @@ import utilities.ListUtilities;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MergeSortStrategy implements ISortingAlgorithm{
+public class MergeSortStrategy implements ISortingStrategy {
     public ListUtilities<Integer> utilities;
     public MergeSortStrategy(){
         utilities = new ListUtilities<>();

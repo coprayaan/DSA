@@ -4,7 +4,7 @@ import utilities.ListUtilities;
 
 import java.util.List;
 
-public class QuickSortStrategy implements ISortingAlgorithm{
+public class QuickSortStrategy implements ISortingStrategy {
     public ListUtilities<Integer> utilities;
     public QuickSortStrategy(){
         utilities = new ListUtilities<>();

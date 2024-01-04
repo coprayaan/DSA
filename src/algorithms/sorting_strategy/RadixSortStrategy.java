@@ -5,7 +5,7 @@ import utilities.ListUtilities;
 import java.util.Arrays;
 import java.util.List;
 
-public class RadixSortStrategy implements ISortingAlgorithm{
+public class RadixSortStrategy implements ISortingStrategy {
 
     public ListUtilities<Integer> utilities;
     public RadixSortStrategy(){

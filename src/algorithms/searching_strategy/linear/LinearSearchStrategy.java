@@ -2,7 +2,7 @@ package algorithms.searching_strategy.linear;
 
 import java.util.List;
 
-public class LinearSearchStrategy implements IIndexSearchAlgorithm {
+public class LinearSearchStrategy implements IIndexSearchStrategy {
 
     private final List<Integer> elements;
 
