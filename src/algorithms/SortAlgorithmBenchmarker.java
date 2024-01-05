@@ -7,14 +7,14 @@ import utilities.StopWatchService;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AlgorithmBenchmarker {
+public class SortAlgorithmBenchmarker {
     private ISortingStrategy strategy;
     private final PrintingService<Integer> printingService;
     private String label;
     private List<Integer> numbers ;
     private final StopWatchService timeEstimate;
 
-    public AlgorithmBenchmarker(List<Integer> numbers, String label , ISortingStrategy strategy ){
+    public SortAlgorithmBenchmarker(List<Integer> numbers, String label , ISortingStrategy strategy ){
         this.strategy = strategy;
         this.printingService = new PrintingService<>();
         this.numbers = new ArrayList<>(numbers);

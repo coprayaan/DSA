@@ -27,7 +27,7 @@ public class BinarySearchStrategy implements ISearchStrategy {
 
 
     @Override
-    public boolean checkIsExist(Integer element_to_search) {
+    public boolean search(Integer element_to_search) {
         if(!isElementsSorted){
             isElementsSorted = utilities.isSorted(elements);
             sortingStrategy.sort(elements);

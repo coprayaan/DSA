@@ -10,7 +10,7 @@ public class LinearSearchStrategy implements IIndexSearchStrategy {
         this.elements = elements;
     }
     @Override
-    public int findIndexOf(Integer element_to_find_index) {
+    public int getIndex(Integer element_to_find_index) {
         for (int i=0; i<elements.size() ;i++) {
             if(elements.get(i) == element_to_find_index){
                 return i;
@@ -20,7 +20,7 @@ public class LinearSearchStrategy implements IIndexSearchStrategy {
     }
 
     @Override
-    public boolean checkIsExist(Integer element_to_search) {
-        return findIndexOf(element_to_search) > 0;
+    public boolean search(Integer element_to_search) {
+        return getIndex(element_to_search) > 0;
     }
 }
